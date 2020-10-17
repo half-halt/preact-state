@@ -1,0 +1,48 @@
+{
+  "name": "preact-store",
+  "version": "1.0.0",
+  "description": "A small library for managing global application state within preact using hooks",
+  "source": "./src/index.ts",
+  "module": "./dist/index.m.js",
+  "main": "./dist/index.cjs.js",
+  "types": "./dist/index.d.ts",
+  "author": "samclement@msn.com",
+  "license": "MIT",
+  "scripts": {
+    "build": "yarn parcel build ./src/index.ts",
+    "test": "yarn jest",
+    "test:watch": "yarn jest --watch"
+  },
+  "peerDependencies": {
+    "preact": "^10.5.4"
+  },
+  "dependencies": {
+    "preact": "^10.5.4"
+  },
+  "devDependencies": {
+    "@parcel/transformer-typescript-tsc": "^2.0.0-nightly.426",
+    "@testing-library/jest-dom": "^5.11.4",
+    "@testing-library/preact": "^2.0.0",
+    "@types/jest": "^26.0.14",
+    "jest": "^26.5.3",
+    "parcel": "^2.0.0",
+    "ts-jest": "^26.4.1",
+    "typescript": "^4.0.3"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "setupFilesAfterEnv": [
+      "@testing-library/jest-dom/extend-expect"
+    ]
+  },
+  "targets":{
+    "module":{
+      "isLibrary": true,
+      "includeNodeModules": false
+    },
+    "main":{
+      "isLibrary": true,
+      "includeNodeModules": false
+    }
+  }
+}
