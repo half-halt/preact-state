@@ -8,6 +8,10 @@
   "types": "./dist/index.d.ts",
   "author": "samclement@msn.com",
   "license": "MIT",
+  "repository": { 
+      "type": "git",
+      "url": "https://github.com/half-halt/preact-state.git" 
+    },
   "scripts": {
     "build": "yarn parcel build ./src/index.ts",
     "test": "yarn jest",
@@ -35,6 +39,9 @@
       "@testing-library/jest-dom/extend-expect"
     ]
   },
+  "publishConfig": { 
+    "registry": "https://npm.pkg.github.com/" 
+  },  
   "targets":{
     "module":{
       "isLibrary": true,
